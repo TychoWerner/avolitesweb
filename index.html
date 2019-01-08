@@ -5,10 +5,11 @@
 
 <body>
 <input type="text" name="txt" value="Hello" onchange="myFunction(this.value)">
-
+  <h1 id="displaytext"></h1>
 <script>
 function myFunction(val) {
-  alert("The input value has changed. The new value is: " + val);
+  var ip = val;
+  document.getElementById("displaytext").value = ip;
 }
 </script>
 </body>
