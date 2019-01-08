@@ -14,18 +14,20 @@ function myFunction(val) {
 }</script>
   
   
-<input type="text" name="url" value="Enter URL" onchange="httpRequest(this.value)">
+<input type="text" name="url" value="Enter URL" onchange="httpRequestSync(this.value)"> <button onclick="httpRequest(url)">Trigger URL</button> 
   <h1 id="urltext">URL</h1>
   <script>
-    function httpRequest(url) {
+    function httpRequestSync(url) {
       var url = url;
       document.getElementById("urltext").innerHTML = url;
+}
+    }
+    function httpRequest(url) {
       const Http = new XMLHttpRequest();
       Http.open("GET", url);
       Http.send();
       Http.onreadystatechange=(e)=>{
       console.log(Http.responseText)
-}
     }
   </script>
   
