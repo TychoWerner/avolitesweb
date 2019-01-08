@@ -11,7 +11,23 @@
 function myFunction(val) {
   var ip = val;
   document.getElementById("displaytext").innerHTML = ip; 
+}</script>
+  
+  
+<input type="text" name="url" value="Enter URL" onchange="httpRequest(this.value)">
+  <h1 id="urltext">URL</h1>
+  <script>
+    function httpRequest(url) {
+      var url = url;
+      document.getElementById("urltext").innerHTML = url;
+      const Http = new XMLHttpRequest();
+      Http.open("GET", url);
+      Http.send();
+      Http.onreadystatechange=(e)=>{
+      console.log(Http.responseText)
 }
-</script>
+    }
+  </script>
+  
 </body>
 </html>
