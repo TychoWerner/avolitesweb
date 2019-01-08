@@ -5,12 +5,12 @@
 </head>
 
 <body>
-<input type="text" name="txt" value="Hello" onchange="myFunction(this.value)">
-  <h1 id="displaytext">NULL</h1>
+<input type="text" name="txt" value="Enter IP" onchange="myFunction(this.value)">
+  <h1 id="displaytext">Enter IP above.</h1>
 <script>
 function myFunction(val) {
   var ip = val;
-  document.getElementById("displaytext").innerHTML = "CHANGES"; 
+  document.getElementById("displaytext").innerHTML = ip; 
 }
 </script>
 </body>
